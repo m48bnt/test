@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: auto;
+}
+
+th, td {
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+    box-sizing: border-box;
+    line-height: 29px;
+    min-width: 50px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+th span {
+    color: #006496;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.table-num {
+    min-width: 40px;
+    text-align: left;
+    padding-left: 11px;
+}
+
+.table-command {
+    text-align: left;
+    min-width: 150px;
+    border-right: 1px solid #d8d8d8;
+    padding-left: 10px;
+}
+
+.table-pts {
+    background: #f9f9f7;
+}
+
+.table-icon {
+    background-image: url('../img/logo.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 12px;
+    margin: 2px 1px 0 0;
+}
+
+.table-link {
+    color: #006496;
+    text-decoration: none;
+}
+
+.table-link:hover {
+    text-decoration: underline;
+}
+
+.color-green {
+    background-color: #7fd498;
+}
+
+.color-light-green {
+    background-color: #cceed6;
+}
+
+.color-light-red {
+    background-color: #ff99b1;
+}
+
+@media screen and (min-width: 441px) and (max-width:548px) {
+    .table-scored, .table-missing {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width:440px) {
+    .table-scored, .table-missing, .table-wins, .table-draws, .table-losses {
+        display: none;
+    }
+}
