@@ -8,13 +8,14 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-table {
+.stat-table {
     width: 100%;
     border-collapse: collapse;
     overflow: auto;
 }
 
-th, td {
+.stat-table th,
+.stat-table td {
     border-top: 1px solid #d8d8d8;
     border-bottom: 1px solid #d8d8d8;
     box-sizing: border-box;
@@ -24,19 +25,19 @@ th, td {
     padding-right: 10px;
 }
 
-th span {
+.stat-table th span {
     color: #006496;
     cursor: pointer;
     text-decoration: none;
 }
 
-.table-num {
+.stat-table .table-num {
     min-width: 40px;
     text-align: left;
     padding-left: 11px;
 }
 
-.table-command {
+.stat-table .table-command {
     text-align: left;
     min-width: 150px;
     border-right: 1px solid #d8d8d8;
@@ -44,11 +45,11 @@ th span {
     width: 100%;
 }
 
-.table-pts {
+.stat-table .table-pts {
     background: #f9f9f7;
 }
 
-.table-icon {
+.stat-table .table-icon {
     background-image: url('../img/logo.png');
     background-repeat: no-repeat;
     display: inline-block;
@@ -57,12 +58,12 @@ th span {
     margin: 0px 3px 0 0;
 }
 
-.table-link {
+.stat-table .table-link {
     color: #006496;
     text-decoration: none;
 }
 
-.table-link:hover {
+.stat-table .table-link:hover {
     text-decoration: underline;
 }
 
@@ -79,13 +80,18 @@ th span {
 }
 
 @media screen and (min-width: 441px) and (max-width:548px) {
-    .table-goals, .table-missing {
+    .stat-table .table-goals,
+    .stat-table .table-missing {
         display: none;
     }
 }
 
 @media screen and (min-width: 0px) and (max-width:440px) {
-    .table-goals, .table-missing, .table-wins, .table-draws, .table-losses {
+    .stat-table .table-goals,
+    .stat-table .table-missing,
+    .stat-table .table-wins,
+    .stat-table .table-draws,
+    .stat-table .table-losses {
         display: none;
     }
 }
