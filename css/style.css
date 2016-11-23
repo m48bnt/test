@@ -66,26 +66,26 @@ th span {
     text-decoration: underline;
 }
 
-.color-green {
+.color1 {
     background-color: #7fd498;
 }
 
-.color-light-green {
+.color2 {
     background-color: #cceed6;
 }
 
-.color-light-red {
+.color4 {
     background-color: #ff99b1;
 }
 
 @media screen and (min-width: 441px) and (max-width:548px) {
-    .table-scored, .table-missing {
+    .table-goals, .table-missing {
         display: none;
     }
 }
 
 @media screen and (min-width: 0px) and (max-width:440px) {
-    .table-scored, .table-missing, .table-wins, .table-draws, .table-losses {
+    .table-goals, .table-missing, .table-wins, .table-draws, .table-losses {
         display: none;
     }
 }

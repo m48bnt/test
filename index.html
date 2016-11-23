@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <script src="libs/jquery-3.1.1.min.js"></script>
+    <script src="libs/handlebars-v4.0.5.js"></script>
     <script src="js/index.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
@@ -23,29 +24,55 @@
     </colgroup>
     <tr>
         <th class="table-num"></th>
-        <th class="table-command">Команда</th>
-        <th class="table-matches">
+        <th class="table-command" data-sortable="true" data-sortorder="desc" data-key="name">Команда</th>
+        <th class="table-matches" data-sortable="true" data-sortorder="desc" data-key="matches">
             <span>М</span>
         </th>
-        <th class="table-wins">
+        <th class="table-wins" data-sortable="true" data-sortorder="desc" data-key="win">
             <span>В</span>
         </th>
-        <th class="table-draws">
+        <th class="table-draws" data-sortable="true" data-sortorder="desc" data-key="draw">
             <span>Н</span>
         </th>
-        <th class="table-losses">
+        <th class="table-losses" data-sortable="true" data-sortorder="desc" data-key="lose">
             <span>П</span>
         </th>
-        <th class="table-scored">
+        <th class="table-goals" data-sortable="true" data-sortorder="desc" data-key="goals">
             <span>Заб</span>
         </th>
-        <th class="table-missing">
+        <th class="table-missing" data-sortable="true" data-sortorder="desc" data-key="conceded_goals">
             <span>Проп</span>
         </th>
-        <th class="table-pts">
+        <th class="table-pts" data-sortable="true" data-sortorder="desc" data-key="score">
             <span>О</span>
         </th>
     </tr>
+    <tbody class="updates"></tbody>
 </table>
+
+<script id="template" type="text/x-handlebars-template">
+    {{#each teams}}
+    <tr>
+        {{#if color}}
+        <td class="table-num color{{color}}">{{place}}</td>
+        {{else}}
+        <td class="table-num">{{place}}</td>
+        {{/if}}
+        <td class="table-command">
+            <i class="table-icon" title="{{flag_country}}" alt="{{flag_country}}"></i>
+            <a class="table-link" href="{{tag_url}}" title="{{name}}">{{name}}</a>
+        </td>
+        <td>{{matches}}</td>
+        <td class="table-wins">{{win}}</td>
+        <td class="table-draws">{{draw}}</td>
+        <td class="table-losses">{{lose}}</td>
+        <td class="table-goals">{{goals}}</td>
+        <td class="table-missing">{{conceded_goals}}</td>
+        <td class="table-pts">{{score}}</td>
+    </tr>
+    {{else}}
+    <tr></tr>
+    {{/each}}
+</script>
 </body>
 </html>
