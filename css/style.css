@@ -41,6 +41,7 @@ th span {
     min-width: 150px;
     border-right: 1px solid #d8d8d8;
     padding-left: 10px;
+    width: 100%;
 }
 
 .table-pts {
@@ -53,7 +54,7 @@ th span {
     display: inline-block;
     width: 16px;
     height: 12px;
-    margin: 2px 1px 0 0;
+    margin: 0px 3px 0 0;
 }
 
 .table-link {
